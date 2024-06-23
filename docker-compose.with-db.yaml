@@ -28,7 +28,7 @@ services:
   
   db:
     image: postgres:13-alpine
-    network_mode: "host"
+    #network_mode: "host"
     ports:
       - 5432:5432
     environment:
@@ -51,7 +51,7 @@ services:
   
   kong-migrations:
     image: kong:3.7
-    command: kong migrations bootstrap
+    command: kong migrations bootstrap -v
     environment:
       KONG_DATABASE: postgres
       KONG_PG_HOST: db

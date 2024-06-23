@@ -33,7 +33,7 @@ Para verificar se o Deck está conectado ao Kong Gateway, execute o seguinte com
 
 ```bash
 docker run --add-host host.docker.internal:host-gateway --network host kong/deck:v1.37.0 gateway ping --kong-addr http://host.docker.internal:8001  
-```
+``` 
 
 ### Fazer dump do Kong Gateway via Deck
 
